@@ -16,3 +16,5 @@ https://medium.com/@basecs101/java-8-frequently-used-stream-methods-latest-inter
 https://medium.com/swlh/java-collectors-and-its-20-methods-2fc422920f18
 https://medium.com/@ujjawalr/solid-principles-in-java-fd5fab6e15ad
 https://medium.com/@satyendra.jaiswal/unveiling-the-power-of-terminal-operations-in-java-stream-api-foreach-count-collect-min-max-b592fe55eb24
+https://k21academy.com/ansible/terraform-vs-ansible/
+https://www.javachinna.com/spring-boot-multiple-data-sources/
