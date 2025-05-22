@@ -53,7 +53,7 @@ public class StringExample {
 	     List<String> ls2 = list.stream().map(String::toUpperCase).collect(Collectors.toList());
 	     ls2.forEach(System.out::print);
 	     System.out.println(ls2);
-	     return ls1;
+	     return ls1; 
     }   
 	
 }
