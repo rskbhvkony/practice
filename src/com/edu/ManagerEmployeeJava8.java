@@ -15,9 +15,7 @@ public static void main(String[] args) {
 	//Compare by first name and then last name
     Comparator<Employee> compareByName = Comparator.comparing(Employee::getFirstName).thenComparing(Employee::getLastName);
      
-    List<Employee> sortedEmployees = employees.stream()
-                    .sorted(compareByName)
-                    .collect(Collectors.toList());
+    List<Employee> sortedEmployees = employees.stream().sorted(compareByName).collect(Collectors.toList());
     System.out.println(" sortedEmployees "+sortedEmployees);
     
   //first name comparator
@@ -35,8 +33,6 @@ public static void main(String[] args) {
     List<Employee> sortedByFirstName = employees.stream()
             						   .sorted(Comparator.comparing( Employee::getFirstName ))
             						   .collect(Collectors.toList());
-    
-    
     System.out.println(" sortedByFirstName "+sortedByFirstName);
 
     

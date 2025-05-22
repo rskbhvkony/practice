@@ -56,4 +56,19 @@ public class Employee{
                 ", salary=" + salary +
                 '}';
     }
+    
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (o instanceof Employee) {
+			Employee s2 = (Employee) o;
+			if (name.equals(s2.name)){
+				return true;
+			}else {
+				return false;
+			}	
+		}
+		return false;
+	}
+
 }

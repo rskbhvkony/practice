@@ -11,7 +11,7 @@ public class Array0s1sProgram {
 		System.out.println("Input Array Before Sorting : " + Arrays.toString(inputArray));
 
 		while (left < right) {
-			if (inputArray[left] == 1) {
+			if (inputArray[left] == 1 ) {
 				// Swapping
 
 				inputArray[right] = inputArray[right] + inputArray[left];
@@ -37,5 +37,10 @@ public class Array0s1sProgram {
 		System.out.println("============================");
 
 		sortBinaryArray(new int[] { 1, 1, 0, 0, 1, 1, 0, 0 });
+		
+		System.out.println("============================");
+
+		sortBinaryArray(new int[] { 0, 1, 0, 0, 1, 1, 0, 0 });
+
 	}
 }

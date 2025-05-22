@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 //https://javainfinite.com/java/collectors-in-java-8-with-examples/
 public class CollectorsGoupingBy {
@@ -17,8 +18,7 @@ public class CollectorsGoupingBy {
                 new Employee(6, "Messy", "Front Desk", 10000));
 
         //Grouping by employees department
-        Map<String, List<Employee>> groupByDepartment =
-                employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment));
+        Map<String, List<Employee>> groupByDepartment = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment));
 
         System.out.println("Group by Department");
         groupByDepartment.forEach((k, v) -> {
@@ -38,8 +38,7 @@ public class CollectorsGoupingBy {
         
         System.out.println("**************************");
         
-        Map<String, Map<Integer, List<Employee>>> empData = employeeList.stream()
-        		.collect(Collectors.groupingBy(Employee::getDepartment, Collectors.groupingBy(Employee::getId)));
+        Map<String, Map<Integer, List<Employee>>> empData = employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.groupingBy(Employee::getId)));
 
         System.out.println("Multiple groupingBy - department and id");
         empData.forEach((k, v) -> {
@@ -112,5 +111,15 @@ public class CollectorsGoupingBy {
             System.out.println("Key is: " + k);
             System.out.println("Value: " + v);
         });
+        
+		/*
+		 * List<String> feedbackTags = Arrays.asList("performance", "usability", "performance", "features", "usability", "performance", "bugs");
+		 * Map<String, Long> length =
+		 * feedbackTags.stream().collect(Collectors.groupingBy(Function.identity(),
+		 * Collectors.counting()));
+		 * 
+		 * length.forEach((k, v) -> { System.out.println("Key is: " + k);
+		 * System.out.println("Value: " + v); });
+		 */
 	}
 }

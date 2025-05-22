@@ -47,8 +47,8 @@ public class Demo {
         System.out.println("SecondHighestSalary"+ secondHighestSalary);
         
 		//FirstRepeat Number and First NonRepeat Number
-		List<Integer> nbr = Arrays.asList(new Integer[] { 1, 2, 1, 3, 4, 4 });
-		numbers.stream().filter(i -> Collections.frequency(nbr, i) > 1).collect(Collectors.toSet())
+		List<Integer> nbr = Arrays.asList(new Integer[] { 1, 2, 1, 3, 2, 4 });
+		nbr.stream().filter(i -> Collections.frequency(nbr, i) > 1).collect(Collectors.toSet())
 				.forEach(System.out::println);
 		
 		//Find first non-repeated Character using basic java
@@ -115,9 +115,12 @@ public class Demo {
         for (int i = chars.length - 1; i >= 0; i--) {
             System.out.print(chars[i]);
         }
+        String bold = "\033[1m"; String reset = "\033[0m";
+        System.out.print(bold+" After Reverse String "+reset);
         
-        System.out.println("");
         String str = "Java Articles are Awesome";
+        System.out.println(" What is the first non-repeating character in the given string " + str);
+        
 
         Character resultChar =   str.chars() // Stream of String       
                                 .mapToObj(s -> Character.toLowerCase(Character.valueOf((char) s))) // First convert to Character object and then to lowercase         
